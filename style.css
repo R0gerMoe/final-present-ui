@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --second-bg-color: #112e42;
+    --main-color: #00abf0;
+  }
+  
+html {
+    /* font-size: 62.5%; */
+    /* min-height: 100vh; */
+    scroll-snap-type: y mandatory;
+    
+  
+}
+
+  
+body {
+    background: var(--second-bg-color);
+    color: #ededed;
+
+    /* background: #222; */
+  }
+
+.container{
+margin: 0;
+min-height: 100vh;
+scroll-snap-align: start;
+}
+
+
+
+.heading{
+    width: 100%;
+    /* background-color: white; */
+    position: fixed;
+    position: relative;
+}
+.heading h1{
+    font-size: 5rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    /* color: black; */
+    animation: heading 5s ease-in-out infinite;
+}
+
+  
+  /* About Section  */
+
+  
+  .about {
+    display: inline-block;
+    margin: 5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: -2rem;
+    background: var(--second-bg-color);
+    padding-top: 6rem;
+  }
+  
+  .about-img {
+    /* position: relative; */
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: floatImage 5s ease-in-out infinite;
+  }
+  
+  .about-img img {
+    width: 90%;
+    border-radius: 50%;
+    border: 0.2rem solid var(--main-color);
+  }
+  
+  .about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: 0.2rem solid var(--second-bg-color);
+    border-bottom: 0.2rem solid var(--second-bg-color);
+    border-left: 0.2rem solid var(--main-color);
+    border-right: 0.2rem solid var(--main-color);
+    animation: aboutSpinner 8s linear infinite;
+  }
+  
+ 
+  
+  .module-border-wrap {
+    max-width: 250px;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, red, purple);
+    padding: 3px;
+  }
+  
+  .module {
+    background: #222;
+    color: white;
+    padding: 2rem;
+  }
+
+  /* /////////////////////////// */
+
+  .lang{
+    margin: 20px;
+    justify-content: center;
+    display: flex;
+  }
+
+  .ui-img {
+ display: flex;
+  }
+  .ui-img img{
+    width: 100rem;
+    /* height: 250px; */
+    /* border: 1px solid; */
+  }
+
+  /* ////////////////////////// */
+  .frame-box{
+      margin-top: 100px;
+
+  }
+
+
+/* ////////////////////// */
+  
+  .img-container{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .first-box{
+    width: 900px;
+    height: 700px;
+    border: 1px solid;
+    margin: 10px;
+    overflow: hidden;
+
+  }
+  .first-box img{
+    width: 100%;
+    transition: .5s;
+  }
+  .intro{
+    width: 900px;
+    height: 70px;
+    padding: 0px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+    /* background-color: white; */
+    color: white;
+    transition: .5s;
+
+    text-align: center;
+    padding: 100px;
+
+  }
+  .intro p{
+    font-size: 3.5rem;
+    visibility: hidden;
+    opacity: 0;
+
+  }
+  .first-box:hover{
+    cursor: pointer;
+  }
+
+  .first-box:hover .intro{
+    height: 400px;
+    bottom: 10px;
+    background-color: rgba(5, 4, 4, 0.5);
+  }
+  .intro:hover p{
+    opacity: 1;
+    visibility: visible;
+  }.first-box:hover img{
+    /* opacity: 0.5; */
+    transform: scale(1.1) rotate(-5deg);
+  }
+
+  .intro button{
+    margin: 30px;
+    visibility: hidden;
+  }
+  .intro a{
+    text-decoration: none;
+    padding: 20px; 
+    font-size: 1.5rem; 
+    /* visibility: hidden; */
+  }
+  .intro:hover button{
+    visibility: visible;
+  }
+
+
+
+
+
+
+
+
+  .second-box{
+    width: 900px;
+    height: 700px;
+    margin: 10px;   
+  }
+  .first-box img{
+    width: 100%; 
+  }
+  .child-box{
+    display: inline-block;
+    margin: 0px 10px 0px 10px;
+    width: 400px;
+    height: 350px;
+    border: 1px solid;
+    justify-content: space-between;
+
+    transition: 0.5s;
+    box-shadow: 10px 10px 30px rgb(0, 0, 0);
+  }
+ 
+  .second-box .child-box:hover{
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 10px 10px 30px rgb(75, 75, 75);
+    /* height: 400px;
+    /* bottom: 0px; */
+    background-color: rgba(5, 4, 4, 0.5); 
+  }
+
+
+/* ///////////////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* KEYFRAMES ANIMATION */
+  
+    @keyframes aboutSpinner {
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes heading{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
